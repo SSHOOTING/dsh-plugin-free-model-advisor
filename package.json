@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-free-model-advisor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "DSH plugin: a read-only /free-models command that lists configured free models and recommends a safe default without changing any configuration.",
   "type": "module",
   "main": "lib/index.js",
@@ -25,13 +25,15 @@
     "README.md",
     "README.zh.md",
     "CHANGELOG.md",
-    "LICENSE"
+    "LICENSE",
+    "docs"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node tests/core.test.mjs && node tests/entry.test.mjs",
-    "pack:check": "npm pack --dry-run"
+    "pack:check": "npm pack --dry-run",
+    "prepack": "npm run build"
   },
   "dsh": {
     "bundle": {

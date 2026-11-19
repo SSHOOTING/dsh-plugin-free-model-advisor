@@ -14,3 +14,8 @@
 - Registers the command through `ctx.effect()` so disable/reload disposes it cleanly.
 - `--json` output with only known fields; all emitted strings are redacted.
 - Fully offline test suite with synthetic fixtures; read-only runtime — no network calls, file writes, config mutation, or model calls.
+
+## 0.1.2 (2026-11-19)
+
+- Build automatically before npm pack/publish so a clean tag produces a complete runtime.
+- Include the demo documentation asset referenced by the README.
