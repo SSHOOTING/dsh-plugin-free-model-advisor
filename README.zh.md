@@ -155,3 +155,10 @@ npm pack --dry-run
 ## 许可证
 
 [MIT](LICENSE)
+
+## 相关插件
+
+- [dsh-plugin-safe-route](https://github.com/SSHOOTING/dsh-plugin-safe-route)
+- [dsh-plugin-session-archive](https://github.com/SSHOOTING/dsh-plugin-session-archive)
+- [dsh-plugin-token-budget](https://github.com/SSHOOTING/dsh-plugin-token-budget)
+- [dsh-plugin-mcp-guard](https://github.com/SSHOOTING/dsh-plugin-mcp-guard)
