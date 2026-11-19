@@ -156,6 +156,11 @@ Tests are fully offline: synthetic fixtures, no model or network calls. `npm tes
 
 [MIT](LICENSE)
 
+
+## Demo
+
+![Demo](docs/demo.png)
+
 ## Related plugins
 
 - [dsh-plugin-safe-route](https://github.com/SSHOOTING/dsh-plugin-safe-route)

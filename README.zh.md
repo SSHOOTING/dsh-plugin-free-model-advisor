@@ -162,3 +162,6 @@ npm pack --dry-run
 - [dsh-plugin-session-archive](https://github.com/SSHOOTING/dsh-plugin-session-archive)
 - [dsh-plugin-token-budget](https://github.com/SSHOOTING/dsh-plugin-token-budget)
 - [dsh-plugin-mcp-guard](https://github.com/SSHOOTING/dsh-plugin-mcp-guard)
+## Demo
+
+![Demo](docs/demo.png)
