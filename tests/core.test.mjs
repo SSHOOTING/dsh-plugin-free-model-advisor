@@ -165,6 +165,6 @@ test('analyze recommends nothing when no free models exist', () => {
 })
 
 test('redact strips common credential shapes', () => {
-  assert.equal(redact('api_key=secret123'), 'api_key=[redacted]')
-  assert.equal(redact('https://x.dev/?token=abc&y=1'), 'https://x.dev/?token=[redacted]&y=1')
+  assert.equal(redact('api_key=EXAMPLE_NOT_A_REAL_SECRET'), 'api_key=[redacted]')
+  assert.equal(redact('https://x.dev/?token=EXAMPLE_NOT_A_REAL_TOKEN&y=1'), 'https://x.dev/?token=[redacted]&y=1')
 })
