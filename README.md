@@ -7,7 +7,7 @@ Cost and routing plugins report what already happened. `free-model-advisor` answ
 ## Install
 
 ```powershell
-dsh plugin add dsh-plugin-free-model-advisor
+dsh plugin --profile web add dsh-plugin-free-model-advisor
 ```
 
 Requires Node `^22.19.0 || >=24` and DSH `>=0.2.0-rc.2 <0.3.0`.
@@ -23,7 +23,7 @@ Requires Node `^22.19.0 || >=24` and DSH `>=0.2.0-rc.2 <0.3.0`.
   opencode-go/hy4-flash-free  ctx 1,048,576  FREE
   opencode-go/longcat-2.5-free  ctx 1,000,000  FREE
 Recommended default: opencode-go/hy4-flash-free
-Hint: Set your default model to opencode-go/hy4-flash-free (free). Configure via cordis.patch.yml, or install with `dsh plugin add dsh-plugin-free-model-advisor`.
+Hint: Set your default model to opencode-go/hy4-flash-free (free). Configure via cordis.patch.yml, or install with `dsh plugin --profile web add dsh-plugin-free-model-advisor`.
 ```
 
 If a configured model cannot be verified:
@@ -34,7 +34,7 @@ If a configured model cannot be verified:
   opencode-go/longcat-2.5-free  ctx 1,000,000  FREE
   deepseek-official/deepseek-v4-pro  UNKNOWN
 Recommended default: opencode-go/hy4-flash-free
-Hint: Set your default model to opencode-go/hy4-flash-free (free). Configure via cordis.patch.yml, or install with `dsh plugin add dsh-plugin-free-model-advisor`.
+Hint: Set your default model to opencode-go/hy4-flash-free (free). Configure via cordis.patch.yml, or install with `dsh plugin --profile web add dsh-plugin-free-model-advisor`.
 ```
 
 Use `/free-models --json` for machine-readable output (CI, scripts, dashboards).
@@ -111,7 +111,7 @@ Only these known fields are read. Any other field is ignored and never serialize
   ],
   "freeCount": 2,
   "recommended": "opencode-go/hy4-flash-free",
-  "hint": "Set your default model to opencode-go/hy4-flash-free (free). Configure via cordis.patch.yml, or install with `dsh plugin add dsh-plugin-free-model-advisor`."
+  "hint": "Set your default model to opencode-go/hy4-flash-free (free). Configure via cordis.patch.yml, or install with `dsh plugin --profile web add dsh-plugin-free-model-advisor`."
 }
 ```
 
@@ -136,7 +136,7 @@ Only these known fields are read. Any other field is ignored and never serialize
 
 | Symptom | Cause | Fix |
 |---|---|---|
-| `/free-models` not found | Bundle row not installed | Re-run `dsh plugin add dsh-plugin-free-model-advisor`, then restart DSH. |
+| `/free-models` not found | Bundle row not installed | Re-run `dsh plugin --profile web add dsh-plugin-free-model-advisor`, then restart DSH. |
 | All models show `UNKNOWN` | Ids don't end in `-free` and aren't marked `free: true` | Add an explicit `free: true` mark, or use a `*-free` id from `opencode-go`. |
 | Wrong inventory | Profile `cordis.patch.yml` overrides the bundle row | Last write wins — edit the profile row, not the package. |
 | My custom config is ignored | Config was placed on `ctx.config` or a different key | Put `models` on the bundle row's `config` (second `apply` argument). |

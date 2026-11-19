@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Fix: all install instructions now include the required --profile web flag.
+
 ## 0.1.0 (2026-11-19)
 
 - Initial release.

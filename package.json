@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-free-model-advisor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DSH plugin: a read-only /free-models command that lists configured free models and recommends a safe default without changing any configuration.",
   "type": "module",
   "main": "lib/index.js",

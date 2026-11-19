@@ -7,7 +7,7 @@
 ## 安装
 
 ```powershell
-dsh plugin add dsh-plugin-free-model-advisor
+dsh plugin --profile web add dsh-plugin-free-model-advisor
 ```
 
 要求 Node `^22.19.0 || >=24`，DSH `>=0.2.0-rc.2 <0.3.0`。
@@ -23,7 +23,7 @@ dsh plugin add dsh-plugin-free-model-advisor
   opencode-go/hy4-flash-free  ctx 1,048,576  FREE
   opencode-go/longcat-2.5-free  ctx 1,000,000  FREE
 Recommended default: opencode-go/hy4-flash-free
-Hint: Set your default model to opencode-go/hy4-flash-free (free). Configure via cordis.patch.yml, or install with `dsh plugin add dsh-plugin-free-model-advisor`.
+Hint: Set your default model to opencode-go/hy4-flash-free (free). Configure via cordis.patch.yml, or install with `dsh plugin --profile web add dsh-plugin-free-model-advisor`.
 ```
 
 如果某个已配置模型无法确认：
@@ -34,7 +34,7 @@ Hint: Set your default model to opencode-go/hy4-flash-free (free). Configure via
   opencode-go/longcat-2.5-free  ctx 1,000,000  FREE
   deepseek-official/deepseek-v4-pro  UNKNOWN
 Recommended default: opencode-go/hy4-flash-free
-Hint: Set your default model to opencode-go/hy4-flash-free (free). Configure via cordis.patch.yml, or install with `dsh plugin add dsh-plugin-free-model-advisor`.
+Hint: Set your default model to opencode-go/hy4-flash-free (free). Configure via cordis.patch.yml, or install with `dsh plugin --profile web add dsh-plugin-free-model-advisor`.
 ```
 
 用 `/free-models --json` 输出机器可读结果，可用于脚本/CI/看板。
@@ -111,7 +111,7 @@ bundle patch 默认写入两条允许的免费模型。在你的 profile `cordis
   ],
   "freeCount": 2,
   "recommended": "opencode-go/hy4-flash-free",
-  "hint": "Set your default model to opencode-go/hy4-flash-free (free). Configure via cordis.patch.yml, or install with `dsh plugin add dsh-plugin-free-model-advisor`."
+  "hint": "Set your default model to opencode-go/hy4-flash-free (free). Configure via cordis.patch.yml, or install with `dsh plugin --profile web add dsh-plugin-free-model-advisor`."
 }
 ```
 
@@ -136,7 +136,7 @@ bundle patch 默认写入两条允许的免费模型。在你的 profile `cordis
 
 | 现象 | 原因 | 处理 |
 |---|---|---|
-| 找不到 `/free-models` | bundle 行未安装 | 重跑 `dsh plugin add dsh-plugin-free-model-advisor`，重启 DSH。 |
+| 找不到 `/free-models` | bundle 行未安装 | 重跑 `dsh plugin --profile web add dsh-plugin-free-model-advisor`，重启 DSH。 |
 | 所有模型都是 `UNKNOWN` | id 不以 `-free` 结尾且未标记 `free: true` | 显式加 `free: true`，或改用 `opencode-go` 的 `*-free` id。 |
 | 清单不对 | profile 的 `cordis.patch.yml` 覆盖了 bundle 行 | 后写者胜；改 profile 里的那一行。 |
 | 自定义配置不生效 | 配置写在了 `ctx.config` 或其他键上 | 把 `models` 放到 bundle 行的 `config`（`apply` 的第二个参数）。 |
