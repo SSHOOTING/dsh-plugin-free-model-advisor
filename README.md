@@ -159,7 +159,7 @@ Tests are fully offline: synthetic fixtures, no model or network calls. `npm tes
 
 ## Demo
 
-![Demo](docs/demo.png)
+![Demo](https://raw.githubusercontent.com/SSHOOTING/dsh-plugin-free-model-advisor/main/docs/demo.png)
 
 
 ## Listed in

@@ -169,4 +169,4 @@ npm pack --dry-run
 - [dsh-plugin-mcp-guard](https://github.com/SSHOOTING/dsh-plugin-mcp-guard)
 ## Demo
 
-![Demo](docs/demo.png)
+![Demo](https://raw.githubusercontent.com/SSHOOTING/dsh-plugin-free-model-advisor/main/docs/demo.png)
